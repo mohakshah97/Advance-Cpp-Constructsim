@@ -122,6 +122,7 @@ include_directories(
 ## Declare a C++ library
 add_library(${PROJECT_NAME}
   src/robot_info_class.cpp
+  src/hydraulic_system_monitor_class.cpp
 )
 
 ## Add cmake target dependencies of the library
@@ -134,7 +135,7 @@ add_library(${PROJECT_NAME}
 ## The recommended prefix ensures that target names across packages don't collide
  add_executable(robot_info_node src/robot_info_node.cpp src/robot_info_class.cpp)
 
- add_executable(agv_robot_info_node src/agv_robot_info_node.cpp src/agv_robot_info_class.cpp src/robot_info_class.cpp)
+ add_executable(agv_robot_info_node src/agv_robot_info_node.cpp src/agv_robot_info_class.cpp src/robot_info_class.cpp src/hydraulic_system_monitor_class.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
